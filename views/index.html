@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+  </head>
+  <body>
+    <main class="container mx-auto w-sm">
+      <input class="rounded-lg mx-auto w-full p-4 outline-none shadow-lg font-size-5 font-semibold" 
+        type="text" 
+        name="ticker" 
+        hx-get="/search"
+        hx-trigger="keyup changed delay:100ms"
+        hx-target="#search-results"
+      />
+      <div id="search-results"></div>
+    
+      <div id="stock-details"></div>
+    </main>
+  </body>
+</html>

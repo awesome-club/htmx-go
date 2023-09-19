@@ -1,0 +1,13 @@
+<ul class="list-none m0 mt-2 p0 rounded-lg shadow-xl border">
+  {{range .Results}}
+    <li>
+      <button  
+        class="bg-white b-none block p3 w-full rounded-lg font-size-4 select-none text-left cursor-pointer hover:bg-#fafafa"
+        hx-get="/values/{{.Ticker}}"
+        hx-trigger="click"
+        hx-target="#stock-details">
+        {{.Name}}
+      </button>
+    </li>
+  {{end}}
+</ul>
